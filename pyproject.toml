@@ -1,0 +1,38 @@
+[project]
+name = "supplies-tracking-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django>=6.1",
+    "django-cors-headers>=4.9.0",
+    "django-stubs>=6.1.0",
+    "djangorestframework>=3.18.0",
+    "djangorestframework-stubs>=3.18.1",
+    "python-dotenv>=1.2.3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.2",
+    "ruff>=0.16.5",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "B",
+]
+ignore = [
+    "E501",
+]
+
+[tool.ruff.format]
+quote-style = "double"
