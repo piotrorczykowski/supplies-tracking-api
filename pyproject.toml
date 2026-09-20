@@ -7,14 +7,15 @@ requires-python = ">=3.12"
 dependencies = [
     "django>=6.1",
     "django-cors-headers>=4.9.0",
-    "django-stubs>=6.1.0",
     "djangorestframework>=3.18.0",
-    "djangorestframework-stubs>=3.18.1",
     "python-dotenv>=1.2.3",
 ]
 
 [dependency-groups]
 dev = [
+    "basedpyright>=1.40.1",
+    "django-stubs>=6.1.0",
+    "djangorestframework-stubs>=3.18.1",
     "pre-commit>=4.6.2",
     "ruff>=0.16.5",
 ]
@@ -36,3 +37,7 @@ ignore = [
 
 [tool.ruff.format]
 quote-style = "double"
+
+[tool.basedpyright]
+reportIncompatibleVariableOverride = false
+reportUnannotatedClassAttribute = false
