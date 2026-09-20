@@ -24,4 +24,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("health/", health_check, name="health-check"),
     path("api-auth/", include("rest_framework.urls")),
+    path("api/users/", include("users.urls")),
 ]
